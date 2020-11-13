@@ -1,0 +1,38 @@
+
+.heading{
+    font-size: 40px;
+    font-weight: 600px;
+    text-align: center;
+    font-style: italic;
+    color: rgb(54, 54, 54);
+}
+.box{
+    margin-top:30px;
+
+}
+.details{
+    border: 3px solid rgb(12, 12, 12);
+    margin-top:30px;
+}
+.details:hover{
+    box-shadow: 2px 4px #424242;
+}
+.description{
+font-weight: 400px;
+font-size: 16px;
+color:rgb(2, 2, 61)
+}
+.container{
+    overflow: scroll;
+}
+.cards{
+    margin : 20px;
+    margin-top: 10px;
+}
+
+.cards1{
+    height:310px;
+    margin : 20px;
+    margin-top: 10px;
+    margin-right: 5px;
+}

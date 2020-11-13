@@ -1,0 +1,262 @@
+
+<app-player-nav ></app-player-nav>
+
+<body class="container">
+  <div style="width: 20%; height: 100%; float:left;" (viewDetails)='viewPlayerDetails($event)' >
+  <mat-card class="cards1">
+    <!-- <img src="{{playerBio?.imageURL}}"style="width: 80%; height: 100%;">
+    <h3> {{playerBio?.name }} </h3> -->
+
+    <mat-card-header>
+        <mat-card-title class="movieTitle"> {{playerBio?.name }} </mat-card-title>
+      </mat-card-header>
+      <img class="player-image" mat-card-image src="{{playerBio?.imageURL}}" [alt]="movie?.title">
+    
+  </mat-card>
+  </div>
+  <div style="width: 80%; height: 100%; float:right;">
+    <mat-card class="cards">
+    <span>
+      <h5>FullName : <span class="description">{{playerBio?.fullName}}</span></h5>
+    </span>
+    <span>
+      <h5>Teams : <span class="description">{{playerBio?.majorTeams}}</span></h5>
+    </span>
+    <span>
+        <h5>Country :<span class="description"> {{playerBio?.country}}</span></h5>
+      </span>
+    <span>
+      <h5>PlayingRole : <span class="description">{{playerBio?.playingRole}}</span></h5>
+    </span>
+    <span>
+      <h5>Born :<span class="description">{{playerBio?.born}}</span></h5>
+    </span>
+    <span>
+      <h5>BattingStyle :<span class="description"> {{playerBio?.battingStyle}}</span></h5>
+    </span>
+    <span>
+      <h5>BowlingStyle :<span class="description">{{playerBio?.bowlingStyle}}</span></h5>
+    </span>
+    </mat-card>
+  </div>
+  <div style="width: 25%; height: 40%;float:left">
+  <mat-card class="cards">
+    <h4>ODI Batting Details:</h4>
+    <span>
+      <h5>Runs : <span class="description">{{playerBio?.data.batting.ODIs?.Runs}}</span> </h5>
+    </span>
+    <span>
+      <h5>Inns :<span class="description">{{playerBio?.data.batting.ODIs?.Inns}}</span></h5>
+    </span>
+    <span>
+      <h5>Matches :<span class="description">{{playerBio?.data.batting.ODIs?.Mat}}</span></h5>
+    </span>
+    <span>
+        <h5>Ave :<span class="description">{{playerBio?.data.batting.ODIs?.Ave}}</span></h5>
+      </span>
+
+    <span>
+      <h5>HS : <span class="description">{{playerBio?.data.batting.ODIs?.HS}}</span></h5>
+    </span>
+    <span>
+      <h5>Strike rate : <span class="description">{{playerBio?.data.batting.ODIs?.SR}}</span></h5>
+    </span>
+  </mat-card>
+  </div>
+
+  <div style="width: 25%; height: 40%;float:left">
+  <mat-card class="cards">
+    <h4>ODI Bowling Details:</h4>
+    <span>
+      <h5> Runs : <span class="description">{{playerBio?.data.bowling.ODIs?.Runs}}</span> </h5>
+    </span>
+
+    <span>
+      <h5>Inns :<span class="description">{{playerBio?.data.bowling.ODIs?.Inns}}</span></h5>
+    </span>
+    <span>
+      <h5>Matches :<span class="description">{{playerBio?.data.bowling.ODIs?.Mat}}</span></h5>
+    </span>
+    <span>
+        <h5>Ave :<span class="description">{{playerBio?.data.bowling.ODIs?.Ave}}</span></h5>
+      </span>
+    <span>
+      <h5>HS : <span class="description">{{playerBio?.data.bowling.ODIs?.HS}}</span></h5>
+    </span>
+    <span>
+      <h5>Strike rate : <span class="description">{{playerBio?.data.bowling.ODIs?.SR}}</span></h5>
+    </span>
+  </mat-card>
+  </div>
+
+
+  <div style="width: 25%; height: 40%;float:left">
+    <mat-card class="cards">    <h4>FirstClass Batting Details:</h4>
+    <span>
+      <h5> Runs : <span class="description">{{playerBio?.data.batting.firstClass?.Runs}}</span> </h5>
+    </span>
+
+    <span>
+      <h5>Inns :<span class="description">{{playerBio?.data.batting.firstClass?.Inns}}</span></h5>
+    </span>
+    <span>
+      <h5>Matches :<span class="description">{{playerBio?.data.batting.firstClass?.Mat}}</span></h5>
+    </span>
+    <span>
+        <h5>Ave :<span class="description">{{playerBio?.data.batting.firstClass?.Ave}}</span></h5>
+      </span>
+    <span>
+      <h5>HS : <span class="description">{{playerBio?.data.batting.firstClass?.HS}}</span></h5>
+    </span>
+    <span>
+      <h5>Strike rate : <span class="description">{{playerBio?.data.batting.firstClass?.SR}}</span></h5>
+    </span>
+  </mat-card>
+
+  </div>
+
+
+
+  <div style="width: 25%; height: 40%;float:left">
+  <mat-card class="cards">
+
+    <h4>FirstClass Bowling Details:</h4>
+    <span>
+      <h5> Runs : <span class="description">{{playerBio?.data.bowling.firstClass?.Runs}}</span> </h5>
+    </span>
+
+    <span>
+      <h5>Inns :<span class="description">{{playerBio?.data.bowling.firstClass?.Inns}}</span></h5>
+    </span>
+    <span>
+      <h5>Matches :<span class="description">{{playerBio?.data.bowling.firstClass?.Mat}}</span></h5>
+    </span>
+    <span>
+        <h5>Ave :<span class="description">{{playerBio?.data.bowling.firstClass?.Ave}}</span></h5>
+      </span>
+    <span>
+      <h5>HS : <span class="description">{{playerBio?.data.bowling.firstClass?.HS}}</span></h5>
+    </span>
+    <span>
+      <h5>Strike rate : <span class="description">{{playerBio?.data.bowling.firstClass?.SR}}</span></h5>
+    </span>
+  </mat-card>
+
+  </div>
+
+  <div style="width: 25%; height: 40%;float:left">
+  <mat-card class="cards">
+
+    <h4>ListA Batting Details:</h4>
+    <span>
+      <h5> Runs : <span class="description">{{playerBio?.data.batting.listA?.Runs}}</span> </h5>
+    </span>
+
+    <span>
+      <h5>Inns :<span class="description">{{playerBio?.data.batting.listA?.Inns}}</span></h5>
+    </span>
+    <span>
+      <h5>Matches :<span class="description">{{playerBio?.data.batting.listA?.Mat}}</span></h5>
+    </span>
+    <span>
+        <h5>Ave :<span class="description">{{playerBio?.data.batting.listA?.Ave}}</span></h5>
+      </span>
+    <span>
+      <h5>HS : <span class="description">{{playerBio?.data.batting.listA?.HS}}</span></h5>
+    </span>
+    <span>
+      <h5>Strike rate : <span class="description">{{playerBio?.data.batting.listA?.SR}}</span></h5>
+    </span>
+  </mat-card>
+
+  </div>
+
+
+
+  <div style="width: 25%; height: 40%;float:left">
+  <mat-card class="cards">
+
+    <h4>ListA Bowling Details:</h4>
+    <span>
+      <h5> Runs : <span class="description">{{playerBio?.data.bowling.listA?.Runs}}</span> </h5>
+    </span>
+
+    <span>
+      <h5>Inns :<span class="description">{{playerBio?.data.bowling.listA?.Inns}}</span></h5>
+    </span>
+    <span>
+      <h5>Matches :<span class="description">{{playerBio?.data.bowling.listA?.Mat}}</span></h5>
+    </span>
+    <span>
+        <h5>Ave :<span class="description">{{playerBio?.data.batting.listA?.Ave}}</span></h5>
+      </span>
+    <span>
+      <h5>HS : <span class="description">{{playerBio?.data.bowling.listA?.HS}}</span></h5>
+    </span>
+    <span>
+      <h5>Strike rate : <span class="description">{{playerBio?.data.bowling.listA?.SR}}</span></h5>
+    </span>
+  </mat-card>
+
+  </div>
+
+
+  <div style="width: 25%; height: 40%;float:left">
+  <mat-card class="cards">
+
+    <h4>Tests Bowling Details:</h4>
+    <span>
+      <h5> Runs : <span class="description">{{playerBio?.data.bowling.tests?.Runs}}</span> </h5>
+    </span>
+    <span>
+      <h5>Balls : <span class="description">{{playerBio?.data.bowling.tests?.Balls}}</span></h5>
+    </span>
+    <span>
+      <h5>Inns : <span class="description">{{playerBio?.data.bowling.tests?.Inns}}</span></h5>
+    </span>
+    <span>
+      <h5>Matches :<span class="description"> {{playerBio?.data.bowling.tests?.Mat}}</span></h5>
+    </span>
+    <span>
+        <h5>Ave :<span class="description">{{playerBio?.data.bowling.tests?.Ave}}</span></h5>
+      </span>
+    <span>
+      <h5>wickets : <span class="description">{{playerBio?.data.bowling.tests?.Wkts}}</span></h5>
+    </span>
+  </mat-card>
+
+
+  </div>
+
+  <div style="width: 25%; height: 40%;float:right">
+  <mat-card class="cards">
+
+    <h4>Tests Batting Details:</h4>
+    <span>
+      <h5> Runs : <span class="description">{{playerBio?.data.batting.tests?.Runs}}</span> </h5>
+    </span>
+    <span>
+      <h5>Strike rate : <span class="description">{{playerBio?.data.batting.tests?.SR}}</span></h5>
+    </span>
+    <span>
+      <h5>Inns :<span class="description">{{playerBio?.data.batting.tests?.Inns}}</span></h5>
+    </span>
+    <span>
+      <h5>Matches :<span class="description"> {{playerBio?.data.batting.tests?.Mat}}</span></h5>
+    </span>
+    <span>
+        <h5>Ave :<span class="description">{{playerBio?.data.batting.tests?.Ave}}</span></h5>
+      </span>
+    <span>
+      <h5>HS : <span class="description">{{playerBio?.data.batting.tests?.HS}}</span></h5>
+    </span>
+  </mat-card>
+
+  </div>
+  <div style="height: 10%;float:right">
+    <div mat-dialog-actions>
+      <button mat-button color=warn (click)="onNoClick()">cancel</button>
+
+    </div>
+  </div>
+</body>

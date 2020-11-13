@@ -1,0 +1,14 @@
+:host{
+    height: 100vh;
+}
+
+
+
+.player-container{
+    width : 100vw;
+    margin-left:4%;
+      display : flex;
+      flex-wrap : wrap;
+      height : 100vh;
+      overflow-x:auto;
+}

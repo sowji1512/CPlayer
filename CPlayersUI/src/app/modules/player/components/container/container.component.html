@@ -1,0 +1,5 @@
+
+<div class="player-container">
+  <player-thumbnail *ngFor="let player of players" [addTofavourites]='addTofavourites' [player]="player" 
+  (addPlayer)='addPlayerToFavourites($event)' (deletePlayer)='removePlayerFromFavourites($event)'(viewDetails)='viewPlayerDetails($event)'></player-thumbnail>
+</div>

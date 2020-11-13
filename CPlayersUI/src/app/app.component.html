@@ -1,0 +1,6 @@
+
+
+<button *ngIf="isAvailable" id="watchlisted" mat-button [routerLink]="['player/favourites']">watchlisted movies</button>
+<button *ngIf="isAvailable" class="search-button" mat-button [routerLink]="['player/search']">search</button>
+<button *ngIf="isAvailable" mat-button class="logout-button" (click)="logout()">Logout</button>
+<router-outlet></router-outlet>

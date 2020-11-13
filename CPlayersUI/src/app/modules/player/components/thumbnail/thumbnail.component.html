@@ -1,0 +1,44 @@
+
+
+<div class="player-container">
+<mat-card class=player-thumbnail>
+  <mat-card-header>
+  
+    <mat-card-title class="playerName"> <b><i>PlayerId :  </i></b>{{player?.pid}}</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="player-overview">
+  <div style="width: 20%; height: 100%; float:left;" >
+      
+      <img src="./assets/images/avatar.png/"style="width: 80%; height: 100%;">
+
+
+      </div>
+      <div style="width: 80%; height: 100%; float:right;">
+          <mat-card-subtitle> <b>Name :  </b>{{player?.name}}
+          </mat-card-subtitle>
+       
+        
+       
+          
+            <b>Full Name :  </b>{{player?.fullName}}
+      
+        
+</div>
+</mat-card-content>
+
+
+
+   
+  <mat-card-actions class="player-actions">
+    
+        <button  class="viewDetails" mat-raised-button color="primary"  (click)="viewStats(player.pid)">View Details</button>
+      
+     
+    
+    <button class="addToFav" *ngIf="!addTofavourites" mat-raised-button color="primary" (click)="addPlayerToFavourites(player)">Add to Favourites</button>
+    <button *ngIf="addTofavourites" mat-raised-button color="warn" (click)="removePlayerFromFavourites(player)">Remove from Favourites</button>
+    
+  </mat-card-actions>
+</mat-card>
+</div>
